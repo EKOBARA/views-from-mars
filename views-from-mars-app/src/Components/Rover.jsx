@@ -1,18 +1,17 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 
 
 
-const Rover = ( ) => {
+const Rover = () => {
 
     const { rover } = useParams();
 
-    const [manifest, setManifest] = useState(null);
-    const [camera, setCamera] = useState([]);
-
-    console.log(rover);
+    const [ manifest, setManifest ] = useState(null);
+    const [ camera, setCamera ] = useState([]);
+    const  = useContext(contextValue)
     
     // API URL
     const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/?api_key=${process.env.REACT_APP_ROVER_KEY}`
@@ -36,19 +35,16 @@ const Rover = ( ) => {
         
     return (
         <>
-            <section>
-                {/* <Cameras camera={camera} /> */}
-
-                {camera.map((elem, idx) => {
+            <header>
+                {camera.map((elem) => {
                     return (
                         <Link to={`${rover}/${elem.name}`}>
 		    	 	        <button className='camera' >{elem.name}</button>
 		    	        </Link>
                         )   
                 })}
-                
-                
-            </section>
+            </header>
+
             <section>
                 <p>{manifest.name}</p>
                 <p>{manifest.launch_date}</p>

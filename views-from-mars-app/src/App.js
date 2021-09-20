@@ -13,10 +13,6 @@ function App() {
 //   const [manifest, setManifest] = useState([]);
 //   const [camera, setCamera] = useState('');
 
-//   const handleClick = (evt) => {
-// 		// console.log(evt);
-// 		setRover(evt.target.innerHTML);
-// 	};
   
   // Link to Rover page with Rover info
   // Link to Camera page with carousel pictures

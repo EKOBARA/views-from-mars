@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-const Photos = ( ) => {
+const Photos = ( camera ) => {
 
     const { rover } = useParams();
     const { cam } = useParams();
@@ -25,15 +25,32 @@ const Photos = ( ) => {
             .catch(() => console.error)
     }, [])
     console.log(photos)
+    if (!photos.length) return <p>No photos taken</p>
     return (
-        <div>
-            {photos.map((elem) => {
-                return (
-                    
-                    <img src={elem.img_src} alt="rocks" />
-                )
-            } ) }
-        </div>
+        <>
+            <header>
+                {/* <Cameras camera={camera} /> */}
+
+                {camera.map((elem) => {
+                    return (
+                        <Link to={`${rover}/${elem.name}`}>
+		    	 	        <button className='camera' >{elem.name}</button>
+		    	        </Link>
+                        )   
+                })}
+                
+                
+            </header>
+            <div>
+                {photos.map((elem) => {
+                    return (
+
+                        <img src={elem.img_src} alt="rocks" />
+                    )
+                } ) }
+            </div>
+
+        </>
     );
 };
 
