@@ -11,7 +11,7 @@ const Rover = () => {
 
     const [ manifest, setManifest ] = useState(null);
     const [ camera, setCamera ] = useState([]);
-    const  = useContext(contextValue)
+    // const  = useContext(contextValue)
     
     // API URL
     const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/?api_key=${process.env.REACT_APP_ROVER_KEY}`

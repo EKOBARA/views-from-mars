@@ -25,11 +25,10 @@ const Photos = ( camera ) => {
             .catch(() => console.error)
     }, [])
     console.log(photos)
-    if (!photos.length) return <p>No photos taken</p>
+    if (!photos.length) return <p className='white'>No photos taken</p>
     return (
         <>
-            <header>
-                {/* <Cameras camera={camera} /> */}
+            {/* <header>
 
                 {camera.map((elem) => {
                     return (
@@ -40,7 +39,7 @@ const Photos = ( camera ) => {
                 })}
                 
                 
-            </header>
+            </header> */}
             <div>
                 {photos.map((elem) => {
                     return (
