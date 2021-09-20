@@ -12,7 +12,7 @@ const Photos = ( ) => {
 
 
 
-    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?earth_date=2015-6-3&camera=${cam}&api_key=${process.env.REACT_APP_ROVER_KEY}`
+    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=1000&camera=${cam}&api_key=${process.env.REACT_APP_ROVER_KEY}`
 
     useEffect(() => {
 
@@ -27,7 +27,12 @@ const Photos = ( ) => {
     console.log(photos)
     return (
         <div>
-            Hello From Camera
+            {photos.map((elem) => {
+                return (
+                    
+                    <img src={elem.img_src} alt="rocks" />
+                )
+            } ) }
         </div>
     );
 };
