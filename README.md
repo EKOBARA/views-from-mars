@@ -1,52 +1,26 @@
 # Views From Mars
-<br>
 
-## Game Discription
+This project was designed and developed by Emmanuel Kobara.
 
-We are all aware of the quest for space exploration thats been on the moinds of many over mellenias. Today, we as a people are making leaps towards the goals of planing a vacation to a nearby star system (small steps but steps nonetheless). One of those steps is checking out our red neighbor. NASA has sent a few rovers over to MArs to make observations and collect data. This includes a series of photograths that are then sent over to Earth to be analized. This app uses the NASA Mars Rover API to display those photos.
+## Description
 
-## API
+Views from Mars was a project inspired by space exploration.\
+There are currently, as of September 2021, 6 rovers on the pkanet Mars.\
+[NASA's open API](https://api.nasa.gov/) gives us access to three of those rovers.\ 
+My application accesses this the Mars Rover API and retrieves images takes by these three rovers,\
+Curiosity, Spirit, and Oportunity. The user is given the option to select the rover, specific camera\
+and even the Earth date that the pictures were captured.
 
-> https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=DEMO_KEY
+This application gives users the ability to see real images from our neighbor planet\ 
+showing users that space exploration is not a science fiction dream but a reality.
 
----
-## Component Heirechy
+## Thechnologies Used
 
-App -> Rover -> Camera -> Photos
+> JavaScript
+> HTML
+> CSS 
+> React
 
----
-## User Stories
+## Contribution Guidelines 
 
-**MVP**
-
-- As a user, I want to see pictures 
-- As a user, I what to be able to choose which rovers pictures i see
-- As a user, I what to know some information about the rover i chose
-- As a user, I what to select the camera
-- As a user, I want to navigate between pictures
-
-**Bronze**:
-
-- As a user, I want to choose the date the picture was taken 
-- As a user, I want to select the amount of pictures
-
-
-**Silver**:
-
-- As a user, I want the pictures i seen saved
-
-
-**Gold**:
-
-- As a user, I want to download the pictures seen 
-- As a user, I want to share the pictures
-- As a user, I want an acoount to save my favorite pictures to
-- As a user, I want a moon
-
-## Wireframes
-
-![Main Page](./wireframe/Vpage1.png)
-
-![Rover](./wireframe/Vpage2.png)
-
-![Image](./wireframe/Vpage3.png)
+Feel free to message me with any bugs, issue or areas of imporvements found.
