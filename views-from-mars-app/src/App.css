@@ -14,18 +14,51 @@ header {
 h1 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 3rem;
-    font-weight: 700;
-    
+    font-weight: 700;  
 }
+
 a {
     text-decoration: none;
 }
+
+section {
+    font-family: 'Ubuntu',sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+}
+
 
 nav {
     display: flex;
     justify-content: space-evenly;
     padding: 1rem;
+    margin: 0 1em 0 1em;
 }
+
+button {
+
+}
+
+.camera {
+    flex-wrap: wrap;
+}
+
+.bold {
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-weight: 800;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .body {
     align-self: center;
@@ -37,3 +70,4 @@ nav {
     font-family: 'Ubuntu', sans-serif;
     font-style: italic;
 }
+

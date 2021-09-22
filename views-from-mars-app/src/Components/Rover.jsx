@@ -1,11 +1,11 @@
 import React from 'react';
-import { useState, useEffect, createContext } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 
 
 
-const Rover = () => {
+const Rover = ( { cameras, setCameras }) => {
 
     const { rover } = useParams();
 
@@ -25,6 +25,7 @@ const Rover = () => {
                 setManifest(mani);
                 const camArr = mani.cameras
                 setCamera(camArr);
+                setCameras(camArr);
             })
             .catch(() => console.error)
             
@@ -35,7 +36,7 @@ const Rover = () => {
         
     return (
         <>
-            <header>
+            <nav className='camera'>
                 {camera.map((elem) => {
                     return (
                         <Link to={`${rover}/${elem.name}`}>
@@ -43,15 +44,25 @@ const Rover = () => {
 		    	        </Link>
                         )   
                 })}
-            </header>
+            </nav>
 
             <section>
-                <p>{manifest.name}</p>
-                <p>{manifest.launch_date}</p>
-                <p>{manifest.landing_date}</p>
-                <p>{manifest.status}</p>
-                <p>{manifest.max_date}</p>
-                <p>{manifest.total_photos}</p>
+                <div className='bold'>
+                    <p>Rover:</p>
+                    <p>Launch Date:</p>
+                    <p>Landing Date:</p>
+                    <p>Current Status:</p>
+                    <p>Last Date:</p>
+                    <p>Total Photos:</p>
+                </div>
+                <div className='info'>
+                    <p>{manifest.name}</p>
+                    <p>{manifest.launch_date}</p>
+                    <p>{manifest.landing_date}</p>
+                    <p>{manifest.status}</p>
+                    <p>{manifest.max_date}</p>
+                    <p>{manifest.total_photos}</p>
+                </div>
             </section>
         </>
     );

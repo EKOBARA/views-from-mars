@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-const Photos = ( camera ) => {
+const Photos = ( {cameras} ) => {
 
     const { rover } = useParams();
     const { cam } = useParams();
@@ -23,34 +23,41 @@ const Photos = ( camera ) => {
                 setPhotos(arr)
             })
             .catch(() => console.error)
-    }, [])
+    }, [cam])
+    
     console.log(photos)
-    if (!photos.length) return <p className='white'>No photos taken</p>
+
     return (
         <>
-            {/* <header>
+        <nav className='camera'>
 
-                {camera.map((elem) => {
-                    return (
-                        <Link to={`${rover}/${elem.name}`}>
-		    	 	        <button className='camera' >{elem.name}</button>
-		    	        </Link>
-                        )   
+            {cameras.map((elem) => {
+                return (
+                    <Link to={`${rover}/${elem.name}`}>
+	    	 	        <button className='camera' >{elem.name}</button>
+	    	        </Link>
+                    )   
                 })}
-                
-                
-            </header> */}
-            <div>
-                {photos.map((elem) => {
+
+        </nav> 
+        <div className='photos'>
+
+            {photos.length ? 
+                photos.map((elem) => {
                     return (
+                        <div>
+                            <img src={elem.img_src} alt="rocks" />
+                        </div>
+                        )
+                    }) 
+                    :
+                    <p className='white'>No photos taken</p>  
+            }
 
-                        <img src={elem.img_src} alt="rocks" />
-                    )
-                } ) }
-            </div>
-
+        </div>
         </>
     );
-};
+}
+
 
 export default Photos;

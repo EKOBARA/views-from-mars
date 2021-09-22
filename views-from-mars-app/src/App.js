@@ -11,7 +11,7 @@ function App() {
 
 //   const [rover, setRover] = useState('');
 //   const [manifest, setManifest] = useState([]);
-//   const [camera, setCamera] = useState('');
+  const [cameras, setCameras] = useState([]);
 
   
   // Link to Rover page with Rover info
@@ -25,8 +25,8 @@ function App() {
 			</header>
 			<main>
 				<Route exact path='/' component={Home} />
-				<Route exact path='/:rover' component={Rover} />
-				<Route exact path='/:rover/:cam' component={Photos} />
+				<Route exact path='/:rover' render={ () => <Rover cameras={cameras} setCameras={setCameras}/>} />
+				<Route exact path='/:rover/:cam' render={ () => <Photos cameras={cameras} setCameras={setCameras} />}/>
 			</main>
 			
 		</div>
