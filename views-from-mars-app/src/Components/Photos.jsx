@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-const Photos = ( camera ) => {
+const Photos = ( {cameras, date} ) => {
 
     const { rover } = useParams();
     const { cam } = useParams();
@@ -12,7 +12,7 @@ const Photos = ( camera ) => {
 
 
 
-    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=1000&camera=${cam}&api_key=${process.env.REACT_APP_ROVER_KEY}`
+    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?earth_date=${date}&camera=${cam}&api_key=${process.env.REACT_APP_ROVER_KEY}`
 
     useEffect(() => {
 
@@ -23,35 +23,41 @@ const Photos = ( camera ) => {
                 setPhotos(arr)
             })
             .catch(() => console.error)
-    }, [])
+    }, [cam])
+    
     console.log(photos)
-    if (!photos.length) return <p>No photos taken</p>
+
     return (
         <>
-            <header>
-                {/* <Cameras camera={camera} /> */}
+        <nav className='camera'>
 
-                {camera.map((elem) => {
-                    return (
-                        <Link to={`${rover}/${elem.name}`}>
-		    	 	        <button className='camera' >{elem.name}</button>
-		    	        </Link>
-                        )   
+            {cameras.map((elem) => {
+                return (
+                    <Link to={`/${rover}/${elem.name}`}>
+	    	 	        <button className='camera' >{elem.name}</button>
+	    	        </Link>
+                    )   
                 })}
-                
-                
-            </header>
-            <div>
-                {photos.map((elem) => {
+
+        </nav> 
+        <div className='photos'>
+
+            {photos.length ? 
+                photos.map((elem) => {
                     return (
+                        <div >
+                            <img  className='photo' src={elem.img_src} alt="rocks" />
+                        </div>
+                        )
+                    }) 
+                    :
+                    <p className='white' >No photos taken</p>  
+            }
 
-                        <img src={elem.img_src} alt="rocks" />
-                    )
-                } ) }
-            </div>
-
+        </div>
         </>
     );
-};
+}
+
 
 export default Photos;
