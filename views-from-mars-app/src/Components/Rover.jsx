@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 
 
 
-const Rover = ( { cameras, setCameras }) => {
+const Rover = ( { date, setDate, setCameras }) => {
 
     const { rover } = useParams();
 
@@ -30,6 +30,11 @@ const Rover = ( { cameras, setCameras }) => {
             .catch(() => console.error)
             
         }, [])
+
+        function handleChange(event) {
+        // You can use handleChange for any form that follows this pattern
+        setDate(event.target.value);
+    }
         
         if (!manifest) return <p>Loading ...</p>
         console.log(camera);
@@ -45,7 +50,10 @@ const Rover = ( { cameras, setCameras }) => {
                         )   
                 })}
             </nav>
-
+            <form>
+                <label htmlFor="date">Select a date between the Landing date and the Last date</label>
+                <input id='date' type="text" onChange={handleChange} value={date} />
+            </form>
             <section>
                 <div className='bold'>
                     <p>Rover:</p>
