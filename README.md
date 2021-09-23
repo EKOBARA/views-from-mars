@@ -12,12 +12,12 @@ View From Mars can be reached by clicking [HERE!](https://optimistic-murdock-828
 
 ## Thechnologies Used
 
--JavaScript
--HTML
--CSS 
--React
--Visual Studio Code
--Netlify
+- JavaScript
+- HTML
+- CSS 
+- React
+- Visual Studio Code
+- Netlify
 
 ## Images of Deployed App
 
