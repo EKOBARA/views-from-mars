@@ -53,7 +53,7 @@ const Rover = ( { date, setDate, setCameras }) => {
                 })}
             </nav>
             <form>
-                <label htmlFor="date">Select a date between the Landing date and the Last date</label>
+                <label htmlFor="date">SELECT A DATE BETWEEN THE LANDING DATE AND THE LAST DATE</label>
                 <input id='date' type="text" onChange={handleChange} value={date} />
             </form>
             <section>
