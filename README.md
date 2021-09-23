@@ -1,8 +1,6 @@
 # Views From Mars
 
-Ever wondered what it was like on Mars? Now you can take a front row seat at the helm of the rovers sen there by NASA!
-![Screen Shot 2021-09-22 at 1 34 14 PM](https://user-images.githubusercontent.com/68764031/134540954-aaa0ea95-ddbf-49aa-9ec2-39c6c0142f98.png)
-
+Ever wondered what it was like on Mars? Now you can take a front row seat at the helm of the rovers sent there by NASA!
 
 ## Description
 
@@ -23,6 +21,7 @@ View From Mars can be reached by clicking [HERE!](https://optimistic-murdock-828
 
 ## Images of Deployed App
 
+![Screen Shot 2021-09-23 at 11 35 54 AM](https://user-images.githubusercontent.com/68764031/134542624-2ccfc16b-44b5-43b0-9e7c-94f70d6ab4a7.png)
 ![Screen Shot 2021-09-23 at 11 35 54 AM](https://user-images.githubusercontent.com/68764031/134542254-dba92b16-1b37-4c92-86d7-d062fd78e959.png)
 ![Screen Shot 2021-09-23 at 11 46 46 AM](https://user-images.githubusercontent.com/68764031/134542269-def79ff9-33b7-4bdc-bc54-ac5b19cabd79.png)
 ![Screen Shot 2021-09-23 at 11 47 05 AM](https://user-images.githubusercontent.com/68764031/134542281-954282e2-a809-42d6-8c34-735ad99ec34a.png)
