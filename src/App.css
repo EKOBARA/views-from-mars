@@ -17,7 +17,7 @@ header {
 
 h1 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
     margin: 0;  
 }
@@ -29,11 +29,16 @@ a {
 
 section {
     font-family: 'Ubuntu',sans-serif;
-    color: white;
+    font-size: 1.5rem;
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 2rem;
+    padding: 1.5rem;
+    padding-right: 4.5rem;
+    background-color: #faa44e;
+    margin: 1em 18em 0 18em;
+    border-radius: 15%;
 }
 
 
@@ -60,16 +65,20 @@ nav {
 form {
 	display: flex;
     flex-direction: column;
-	padding: 0 5rem 0 5rem 0;
+	padding: 1rem 5rem 1rem 5rem ;
     justify-content: center;
+   
+    
 }
 
 input {
     text-align: center;
+    font-family: 'Ubuntu';
+    font-weight: 500;
     border-radius: 100px;
-    height: 20px;
-    width: 4rem;
-    padding: 0 2.5rem 0 2.5rem;
+    height: 30px;
+    width: 4.5rem;
+    padding: 0 3rem 0 3rem;
     align-self: center;
 
 }
@@ -77,7 +86,7 @@ input {
 label {
     font-family: 'Ubuntu';
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 12px;
     text-align: center;
 }
@@ -87,6 +96,11 @@ label {
     display: flex;
     justify-content: center;
     flex-direction: row;
+}
+
+.red {
+    height: 70%;
+    width: 70%;
 }
 
 .camera {
@@ -129,13 +143,6 @@ label {
   border-radius: 5%;
 }
 
-#moon {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    animation: spin 20s infinite;
-}
-
 .moon {
     display: flex;
     justify-content: center;
@@ -160,6 +167,8 @@ label {
     animation: rotate 30s linear infinite;
     color: rgb(143, 34, 9);
 }
+
+
 @keyframes rotate{
 	from{transform:rotate(360deg)}
 	to{transform:rotate(0deg)}	
@@ -168,3 +177,10 @@ label {
 	from{transform:rotate(0deg)}
 	to{transform:rotate(360deg)}	
 } 
+
+#moon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    animation: spin 20s infinite;
+}
