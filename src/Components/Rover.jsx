@@ -44,10 +44,10 @@ const Rover = ( { date, setDate, setCameras }) => {
     return (
         <>
             <nav className='camera'>
-                {camera.map((elem) => {
+                {camera.map((elem, idx) => {
                     return (
                         <Link to={`/${rover}/${elem.name}`}>
-		    	 	        <button className='rover' >{elem.name}</button>
+		    	 	        <button className='rover' key={idx}>{elem.name}</button>
 		    	        </Link>
                         )   
                 })}

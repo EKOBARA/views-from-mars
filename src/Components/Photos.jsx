@@ -28,10 +28,10 @@ const Photos = ( {cameras, date} ) => {
         <>
         <nav className='camera'>
 
-            {cameras.map((elem) => {
+            {cameras.map((elem, idx) => {
                 return (
                     <Link to={`/${rover}/${elem.name}`}>
-	    	 	        <button className='camera' >{elem.name}</button>
+	    	 	        <button className='camera' key={idx} >{elem.name}</button>
 	    	        </Link>
                     )   
                 })}
@@ -40,10 +40,10 @@ const Photos = ( {cameras, date} ) => {
         <div className='photos'>
 
             {photos.length ? 
-                photos.map((elem) => {
+                photos.map((elem, idx) => {
                     return (
                         <div >
-                            <img  className='photo' src={elem.img_src} alt="rocks" />
+                            <img key={idx} className='photo' src={elem.img_src} alt="rocks" />
                         </div>
                         )
                     }) 
