@@ -10,8 +10,6 @@ const Photos = ( {cameras, date} ) => {
 
     const [photos, setPhotos] = useState([]);
 
-
-
     const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?earth_date=${date}&camera=${cam}&api_key=${process.env.REACT_APP_ROVER_KEY}`
 
     useEffect(() => {
