@@ -158,7 +158,7 @@ label {
     font-size: 3rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     animation: rotate 30s linear infinite;
-    color: #f87307;
+    color: rgb(143, 34, 9);
 }
 @keyframes rotate{
 	from{transform:rotate(360deg)}
