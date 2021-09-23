@@ -8,8 +8,6 @@ body {
     /* background-color: beige; */
 }
 
-
-
 header {
     text-align: center;
     background-color: rgba(236, 50, 9, .44);
@@ -48,7 +46,7 @@ nav {
     border-radius: 20px;
 }
 
-button {
+.rover {
     font-family: 'Ubuntu';
     font-weight: 500;
     padding: 10px 15px;
@@ -88,6 +86,7 @@ label {
     padding-top: 2rem;
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 .camera {
@@ -129,3 +128,43 @@ label {
   height: 100%;
   border-radius: 5%;
 }
+
+#moon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    animation: spin 20s infinite;
+}
+
+.moon {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: auto;
+    /* padding: ; */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5c/Phobos_colour_2008.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40%;
+    animation: spin 30s linear infinite;
+    height: 100vh;
+    width: 100vh;
+}
+
+.ye {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation: rotate 30s linear infinite;
+    color: rgb(143, 34, 9);
+}
+@keyframes rotate{
+	from{transform:rotate(360deg)}
+	to{transform:rotate(0deg)}	
+} 
+@keyframes spin{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}	
+} 

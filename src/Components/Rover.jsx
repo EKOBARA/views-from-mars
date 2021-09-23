@@ -17,6 +17,8 @@ const Rover = ( { date, setDate, setCameras }) => {
     const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/?api_key=${process.env.REACT_APP_ROVER_KEY}`
     
     // get API data
+
+
     useEffect(() => {
        
         axios.get(url)
@@ -35,17 +37,17 @@ const Rover = ( { date, setDate, setCameras }) => {
         // You can use handleChange for any form that follows this pattern
         setDate(event.target.value);
     }
-        
+        if (rover === 'moon') return null;
         if (!manifest) return <p>Loading ...</p>
-        console.log(camera);
+       
         
     return (
         <>
             <nav className='camera'>
-                {camera.map((elem) => {
+                {camera.map((elem, idx) => {
                     return (
-                        <Link to={`${rover}/${elem.name}`}>
-		    	 	        <button className='camera' >{elem.name}</button>
+                        <Link to={`/${rover}/${elem.name}`}>
+		    	 	        <button className='rover' key={idx}>{elem.name}</button>
 		    	        </Link>
                         )   
                 })}
