@@ -31,7 +31,7 @@ const Photos = ( {cameras, date} ) => {
             {cameras.map((elem, idx) => {
                 return (
                     <Link to={`/${rover}/${elem.name}`}>
-	    	 	        <button className='camera' key={idx} >{elem.name}</button>
+	    	 	        <button className='rover' key={idx} >{elem.name}</button>
 	    	        </Link>
                     )   
                 })}
