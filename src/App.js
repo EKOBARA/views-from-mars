@@ -4,6 +4,7 @@ import Rover from './Components/Rover';
 import Photos from './Components/Photos';
 import { useState } from 'react';
 import { Route, Link } from 'react-router-dom';
+import Moon from './Components/Moon';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 			</header>
 			<main>
 				<Route exact path='/' component={Home} />
+				<Route exact path='/moon' component={Moon}/>
 				<Route exact path='/:rover' render={ () => <Rover cameras={cameras} setCameras={setCameras} date={date} setDate={setDate} />} />
 				<Route exact path='/:rover/:cam' render={ () => <Photos cameras={cameras} setCameras={setCameras} date={date} />}/>
 			</main>
