@@ -39,7 +39,7 @@ const Rover = ( { date, setDate, setCameras }) => {
     }
         if (rover === 'moon') return null;
         if (!manifest) return <p>Loading ...</p>
-        console.log(camera);
+       
         
     return (
         <>

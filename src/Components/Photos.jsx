@@ -18,14 +18,13 @@ const Photos = ( {cameras, date} ) => {
 
        axios.get(url)
             .then((res) => {
-                console.log(res)
                 const arr = res.data.photos;
                 setPhotos(arr)
             })
             .catch(() => console.error)
     }, [cam])
     
-    console.log(photos)
+
 
     return (
         <>
