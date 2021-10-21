@@ -37,8 +37,8 @@ section {
     padding: 1.5rem;
     padding-right: 4.5rem;
     background-color: #faa44e;
-    margin: 1em 18em 0 18em;
-    border-radius: 15%;
+    margin: 2em ;
+    border-radius: 10px;
 }
 
 
@@ -67,8 +67,6 @@ form {
     flex-direction: column;
 	padding: 1rem 5rem 1rem 5rem ;
     justify-content: center;
-   
-    
 }
 
 input {
